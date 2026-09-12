@@ -1,0 +1,57 @@
+---
+import Navbar from "@/components/Navbar.astro";
+import "@/styles/variables.css";
+import "@/styles/global.css";
+import "@/styles/layout.css";
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+
+const canonicalURL = new URL(
+  Astro.url.pathname,
+  Astro.site ?? Astro.url.origin,
+);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+  </head>
+
+  <body>
+    <Navbar />
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>
+          © {new Date().getFullYear()} AviosIT. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      import "@/scripts/theme-toggle";
+    </script>
+  </body>
+</html>

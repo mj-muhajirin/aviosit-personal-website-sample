@@ -1,0 +1,33 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Card from "@/components/Card.astro";
+import { projects } from "@/data/projects";
+---
+
+<BaseLayout
+  title="Projects — AviosIT"
+  description="Explore all AviosIT projects covering web development, artificial intelligence, machine learning, and modern software engineering."
+>
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h1 class="section-header__title">
+          Projects
+        </h1>
+
+        <p class="section-header__description">
+          Explore all projects built with modern technologies,
+          practical solutions, and scalable development practices.
+        </p>
+      </div>
+
+      <div class="grid grid--3">
+        {
+          projects.map((project) => (
+            <Card project={project} />
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,136 @@
+/* Page layout */
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main */
+
+main {
+  flex: 1;
+  width: 100%;
+}
+
+/* Container */
+
+.container {
+  width: min(100% - (var(--content-padding) * 2), var(--content-width));
+
+  margin-inline: auto;
+}
+
+/* Sections */
+
+.section {
+  padding-block: var(--space-16);
+}
+
+.section + .section {
+  padding-top: var(--space-8);
+}
+
+/* Section header */
+
+.section-header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+
+  margin-bottom: var(--space-8);
+}
+
+.section-header__eyebrow {
+  color: var(--color-primary);
+
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+}
+
+.section-header__title {
+  margin: 0;
+}
+
+.section-header__description {
+  max-width: 100%;
+
+  color: var(--color-text-secondary);
+}
+
+/* Grid */
+
+.grid {
+  display: grid;
+  gap: var(--space-6);
+}
+
+/* Two-column grid */
+
+.grid--2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+/* Three-column grid */
+
+.grid--3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+/* Footer */
+
+.footer {
+  flex-shrink: 0;
+
+  padding-block: var(--space-8);
+
+  border-top: 1px solid var(--color-border);
+
+  background: var(--color-surface);
+  color: var(--color-text-muted);
+
+  font-size: var(--font-size-sm);
+  text-align: center;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .container {
+    width: min(100% - (var(--space-8) * 2), var(--content-width));
+  }
+
+  .section {
+    padding-block: var(--space-12);
+  }
+
+  .section + .section {
+    padding-top: var(--space-6);
+  }
+
+  .section-header {
+    margin-bottom: var(--space-6);
+  }
+
+  .grid--2,
+  .grid--3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: min(100% - (var(--space-6) * 2), var(--content-width));
+  }
+
+  .section {
+    padding-block: var(--space-10);
+  }
+
+  .section + .section {
+    padding-top: var(--space-5);
+  }
+
+  .section-header {
+    margin-bottom: var(--space-5);
+  }
+}

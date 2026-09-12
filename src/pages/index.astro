@@ -1,0 +1,73 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Button from "@/components/Button.astro";
+import Card from "@/components/Card.astro";
+import { projects } from "@/data/projects";
+
+const featuredProjects = projects.slice(0, 3);
+---
+
+<style>
+  .hero__description {
+    margin-bottom: var(--space-6);
+  }
+
+  .hero__actions {
+    max-width: 30%;
+  }
+</style>
+
+<BaseLayout
+  title="AviosIT — Personal Website Sample"
+  description="A sample version of the AviosIT personal website built with Astro, TypeScript, CSS, and modern web technologies."
+>
+  <section class="section">
+    <div class="container">
+      <div class="hero">
+        <p class="hero__eyebrow">Hi there, I am AviosIT.</p>
+
+        <h1 class="hero__title">
+          Building modern website with Astro, TypeScript, CSS, and Cloudflare Pages
+        </h1>
+
+        <p class="hero__description">
+          A sample version of the AviosIT Personal Website architecture focused
+          on performance, maintainability, accessibility, and scalability.
+        </p>
+
+        <div class="grid grid--2 hero__actions">
+          <Button href="/about">
+            About Me
+          </Button>
+
+          <Button href="/projects" variant="secondary">
+            View Projects
+          </Button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-header__title">
+          Featured Projects
+        </h2>
+
+        <p class="section-header__description">
+          A selection of projects demonstrating different technologies,
+          architectures, and development practices.
+        </p>
+      </div>
+
+      <div class="grid grid--3">
+        {
+          featuredProjects.map((project) => (
+            <Card project={project} />
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</BaseLayout>

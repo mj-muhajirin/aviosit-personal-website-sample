@@ -1,0 +1,37 @@
+---
+import "@/styles/components/button.css";
+
+interface Props {
+  href?: string;
+  variant?: "primary" | "secondary";
+  type?: "button" | "submit" | "reset";
+  ariaLabel?: string;
+}
+
+const {
+  href,
+  variant = "primary",
+  type = "button",
+  ariaLabel,
+} = Astro.props;
+---
+
+{
+  href ? (
+    <a
+      class={`button button--${variant}`}
+      href={href}
+      aria-label={ariaLabel}
+    >
+      <slot />
+    </a>
+  ) : (
+    <button
+      class={`button button--${variant}`}
+      type={type}
+      aria-label={ariaLabel}
+    >
+      <slot />
+    </button>
+  )
+}

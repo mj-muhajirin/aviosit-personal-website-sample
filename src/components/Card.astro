@@ -1,0 +1,38 @@
+---
+import type { Project } from "@/types/content";
+import Button from "@/components/Button.astro";
+import "@/styles/components/card.css";
+
+interface Props {
+  project: Project;
+}
+
+const { project } = Astro.props;
+---
+
+<article class="card">
+  <div class="card__content">
+    <h2 class="card__title">
+      {project.title}
+    </h2>
+
+    <p class="card__description">
+      {project.description}
+    </p>
+
+    <ul class="card__tags" aria-label={`${project.title} technologies`}>
+      {
+        project.tags.map((tag) => (
+          <li class="card__tag">
+            {tag}
+          </li>
+        ))
+      }
+    </ul>
+
+    <Button href={project.href} variant="primary">
+      View Project
+      <span aria-hidden="true">→</span>
+    </Button>
+  </div>
+</article>

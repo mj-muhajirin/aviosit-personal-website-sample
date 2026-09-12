@@ -1,0 +1,41 @@
+---
+import "@/styles/components/navbar.css";
+
+interface NavItem {
+  label: string;
+  href: string;
+}
+
+const navItems: NavItem[] = [
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Projects", href: "/projects" },
+];
+---
+
+<header class="navbar">
+  <nav class="navbar__container" aria-label="Main navigation">
+    <a class="navbar__brand" href="/">
+      AviosIT
+    </a>
+
+    <div class="navbar__links">
+      {
+        navItems.map((item) => (
+          <a class="navbar__link" href={item.href}>
+            {item.label}
+          </a>
+        ))
+      }
+    </div>
+
+    <button
+      class="navbar__theme-toggle"
+      type="button"
+      aria-label="Toggle theme"
+      data-theme-toggle
+    >
+      <span aria-hidden="true">◐</span>
+    </button>
+  </nav>
+</header>
