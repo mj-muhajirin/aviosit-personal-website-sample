@@ -21,13 +21,19 @@ to privacy and security considerations.
 
 ## 1. Project Details
 
-[Project Details](https://aviosit.com/projects/aviosit-personal-website) — Explore the complete project overview and development details.
+[AviosIT Personal Website Project](https://aviosit.com/projects/aviosit-personal-website) — Explore the complete project overview and development details.
 
-[Video Demonstration](https://www.youtube.com/@AviosIT) — Watch the project in action and see how it works in practice.
+[The Project Demonstration](https://www.youtube.com/watch?v=JHukmUNXEiQ) — Watch the project in action and see how it works in practice.
 
 [Live Demo](https://aviosit.com/?live-demo=website) — Try the project yourself through the live application.
 
-## 2. How to Run
+## 2. Tutorial Details
+
+[How to Deploy Astro to Cloudflare Workers with GitHub and Wrangler](https://aviosit.com/tutorials/deploying-astro-to-clouldflare-pages) — Explore the complete tutorial.
+
+[The Tutorial Demonstration](https://www.youtube.com/watch?v=JHukmUNXEiQ) — Watch the project in action and see how it works in practice.
+
+## 3. How to Run
 
 ### A. Prerequisites
 
@@ -77,7 +83,7 @@ npm run dev
 
 The application will be available at: http://localhost:4321
 
-## 3. License
+## 4. License
 
 This project is licensed under the [MIT License](LICENSE).
 
@@ -87,8 +93,8 @@ This project is licensed under the [MIT License](LICENSE).
 
 <!-- PROJECT LINKS -->
 
-<a href="https://malaikat.aviosit.workers.dev"><img src="https://img.shields.io/badge/🌐%20Web%20Page-2563EB?style=for-the-badge" alt="Web Page"></a>
-<a href="https://www.youtube.com/@AviosIT"><img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube"></a>
-<a href="https://malaikat.aviosit.workers.dev"><img src="https://img.shields.io/badge/🖥%20Live%20Demo-238636?style=for-the-badge" alt="Live Demo"></a>
+<a href="https://aviosit.com/projects/aviosit-personal-website"><img src="https://img.shields.io/badge/🌐%20Web%20Page-2563EB?style=for-the-badge" alt="Web Page"></a>
+<a href="https://www.youtube.com/watch?v=JHukmUNXEiQ"><img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube"></a>
+<a href="https://aviosit.com/?live-demo=website"><img src="https://img.shields.io/badge/🖥%20Live%20Demo-238636?style=for-the-badge" alt="Live Demo"></a>
 
 </div>
