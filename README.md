@@ -8,7 +8,7 @@
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 ![HTML5](https://img.shields.io/badge/HTML5-E34C26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-663399?style=for-the-badge&logo=css&logoColor=white)
-![Cloudflare Pages](https://img.shields.io/badge/Cloudflare%20Pages-F6821F?style=for-the-badge&logo=cloudflare&logoColor=white)
+![Cloudflare Workers](https://img.shields.io/badge/Cloudflare%20Pages-F6821F?style=for-the-badge&logo=cloudflare&logoColor=white)
 
 </div>
 
@@ -29,9 +29,9 @@ to privacy and security considerations.
 
 ## 2. Tutorial Details
 
-[How to Deploy Astro to Cloudflare Workers with GitHub and Wrangler](https://aviosit.com/tutorials/deploying-astro-to-clouldflare-pages) — Explore the complete tutorial.
+[How to Deploy Astro to Cloudflare Workers with GitHub and Wrangler](https://aviosit.com/tutorials/deploying-astro-to-cloudflare-workers) — Explore the complete tutorial.
 
-[The Tutorial Demonstration](https://www.youtube.com/watch?v=JHukmUNXEiQ) — Watch the project in action and see how it works in practice.
+[The Tutorial Demonstration](https://www.youtube.com/watch?v=JHukmUNXEiQ) — Watch the deployment workflow in practice.
 
 ## 3. How to Run
 
